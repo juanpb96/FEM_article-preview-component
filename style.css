@@ -21,13 +21,18 @@ body {
   width: 325px; }
   .card__banner {
     width: 100%;
-    margin: 0; }
-  .card__img {
+    height: 200px;
+    margin: 0;
     border-radius: 10px 10px 0 0;
-    width: 100%; }
+    overflow: hidden; }
+  .card__img {
+    width: 100%;
+    position: relative;
+    bottom: 17px;
+    border-radius: 10px 10px 0 0; }
   .card__info {
     width: 80%;
-    margin: 30px auto; }
+    margin: 35px auto; }
   .card__title {
     color: #48556a;
     font-size: 1.25rem;
@@ -38,10 +43,18 @@ body {
     font-weight: 400; }
 
 .profile {
-  width: 80%;
-  margin: 20px auto;
-  display: flex;
-  align-items: center; }
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+  background-color: #48556a; }
+  .profile--active {
+    background-color: #48556a; }
+  .profile__author {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    display: none; }
   .profile__photo {
     width: 39px;
     height: 39px;
@@ -57,19 +70,37 @@ body {
     color: #9eafc2;
     font-size: 1rem; }
   .profile__social {
-    display: none; }
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+  .profile__share {
+    color: #9eafc2;
+    letter-spacing: 4px; }
+  .profile__icons {
+    width: 90px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between; }
 
 .btn {
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   margin-left: auto;
   background-color: #ecf2f8;
   border: none;
-  border-radius: 50%; }
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+  .btn--active {
+    background-color: #9eafc2; }
 
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 10px; }
   .attribution a {
     color: #3e52a3; }
 
