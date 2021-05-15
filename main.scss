@@ -23,6 +23,7 @@ body {
 .card {
     background-color: white;
     border-radius: 10px;
+    box-shadow: 1px 5px 15px $grayish-blue;
     width: 325px;
 
     &__banner {
@@ -155,7 +156,57 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
+    .card {
+        width: 60%;
+        max-width: 735px;
+        height: 285px;
+        display: flex;
+
+        &__banner {
+            width: 40%;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &__img {
+            width: 123%;
+            height: 100%;
+            position: static;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &__content {
+            width: 60%;
+        }
+
+        &__info {
+            width: 80%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            letter-spacing: 0.5px;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+    }
+
+    .profile {
+        padding: 0;
+
+        &__author {
+            margin: auto;
+        }
+    }
+
+    .btn {
+        &:hover {
+            background-color: $grayish-blue;
+        }
+    }
+
     .attribution {
         margin-top: 12rem;
     }

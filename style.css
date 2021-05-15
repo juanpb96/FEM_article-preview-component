@@ -18,6 +18,7 @@ body {
 .card {
   background-color: white;
   border-radius: 10px;
+  box-shadow: 1px 5px 15px #9eafc2;
   width: 325px; }
   .card__banner {
     width: 100%;
@@ -110,7 +111,40 @@ body {
   .attribution a {
     color: #3e52a3; }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: 60%;
+    max-width: 735px;
+    height: 285px;
+    display: flex; }
+    .card__banner {
+      width: 40%;
+      height: 100%;
+      border-radius: 10px 0 0 10px; }
+    .card__img {
+      width: 123%;
+      height: 100%;
+      position: static;
+      border-radius: 10px 0 0 10px; }
+    .card__content {
+      width: 60%; }
+    .card__info {
+      width: 80%;
+      margin-top: 30px;
+      margin-bottom: 20px; }
+    .card__title {
+      letter-spacing: 0.5px;
+      font-size: 1.5rem;
+      margin-bottom: 5px; }
+
+  .profile {
+    padding: 0; }
+    .profile__author {
+      margin: auto; }
+
+  .btn:hover {
+    background-color: #9eafc2; }
+
   .attribution {
     margin-top: 12rem; } }
 
