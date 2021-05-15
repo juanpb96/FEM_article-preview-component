@@ -14,7 +14,7 @@ body {
 
 .container {
     width: 100%;
-    height: 50rem;
+    height: 52rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +41,13 @@ body {
     }
 
     &__info {
-        width: 80%;
-        margin: 35px auto;
+        width: 79%;
+        margin: 35px auto 20px;
     }
 
     &__title {
         color: $dark-grayish-blue;
+        line-height: 1.5;
         font-size: 1.25rem;
         font-weight: 700;
     }
@@ -62,7 +63,8 @@ body {
     width: 100%;
     padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    background-color: $dark-grayish-blue;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
 
     &--active {
         background-color: $dark-grayish-blue;
@@ -70,10 +72,13 @@ body {
 
     &__author {
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 10px;
         display: flex;
         align-items: center;
-        display: none;
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__photo {
@@ -100,10 +105,14 @@ body {
 
     // Social newtworks styles
     &__social {
+        display: none;
         width: 80%;
         margin: 0 auto;
-        display: flex;
         align-items: center;
+
+        &--active {
+            display: flex;
+        }
     }
 
     &__share {
@@ -116,6 +125,7 @@ body {
         margin-left: 20px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -132,15 +142,21 @@ body {
     cursor: pointer;
 
     &--active {
-        background-color: $grayish-blue;
+        background-color: $soft-dark-blue;
     }
 }
 
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     a { 
         color: hsl(228, 45%, 44%); 
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .attribution {
+        margin-top: 12rem;
     }
 }
