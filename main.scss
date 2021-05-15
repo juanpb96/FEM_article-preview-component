@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-    background-color: white;
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 1px 5px 15px $grayish-blue;
     width: 325px;
@@ -64,7 +64,7 @@ body {
     width: 100%;
     padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    background-color: white;
+    background-color: $white;
     transition: background-color 0.2s ease-in-out;
 
     &--active {
@@ -178,6 +178,7 @@ body {
 
         &__content {
             width: 60%;
+            position: relative;
         }
 
         &__info {
@@ -198,6 +199,30 @@ body {
 
         &__author {
             margin: auto;
+        }
+
+        &__social {
+            width: 60%;
+            padding: 5px;
+            background-color: $dark-grayish-blue;
+            border-radius: 10px;
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            bottom: 110px;
+            left: 170px;
+            
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -26px;
+                border-top: 13px solid $dark-grayish-blue;
+                border-right: 13px solid transparent;
+                border-left: 13px solid transparent;
+                border-bottom: 13px solid transparent;
+            }
         }
     }
 
