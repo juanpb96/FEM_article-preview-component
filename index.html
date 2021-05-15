@@ -9,6 +9,7 @@
   <title>Frontend Mentor | Article preview component</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -34,19 +35,19 @@
               <p class="profile__date"><time datetime="2020-06-28">28 Jun 2020</time></p>
             </div>
             <button class="btn">
-              <img class="btn__img btn__img--deactivated" src="./images/icon-share.svg" alt="">
+              <img class="btn__img" src="./images/icon-share.svg" alt="">
             </button>
           </div>
 
           <div class="profile__social">
             <p class="profile__share">SHARE</p>
             <div class="profile__icons">
-              <img src="./images/icon-facebook.svg" alt="On Facebook" class="profile__site">
-              <img src="./images/icon-twitter.svg" alt="On Twitter" class="profile__site">
-              <img src="./images/icon-pinterest.svg" alt="On Pinterest" class="profile__site">
+              <a href="#"><img src="./images/icon-facebook.svg" alt="On Facebook" class="profile__site"></a>
+              <a href="#"><img src="./images/icon-twitter.svg" alt="On Twitter" class="profile__site"></a>
+              <a href="#"><img src="./images/icon-pinterest.svg" alt="On Pinterest" class="profile__site"></a>
             </div>
             <button class="btn btn--active">
-              <img class="btn__img btn__img--activated" src="./images/icon-share-active.svg" alt="">
+              <img class="btn__img" src="./images/icon-share-active.svg" alt="">
             </button>
           </div>
         </section>
