@@ -1,14 +1,19 @@
 const toggle = () => {
     const element = 'profile';
-
-    if (profileSection.className.includes('--active')) {
-        profileSection.className = element;
-        authorDiv.className = `${element}__author`;
-        socialDiv.className = ` ${element}__social`;
+    const width = document.documentElement.clientWidth;
+    
+    if (width < 1024) {
+        if (profileSection.className.includes('--active')) {
+            profileSection.className = element;
+            authorDiv.className = `${element}__author`;
+            socialDiv.className = ` ${element}__social`;
+        } else {
+            profileSection.className += ` ${element}--active`;
+            authorDiv.className += ` ${element}__author--hidden`;
+            socialDiv.className += ` ${element}__social--active`;
+        }
     } else {
-        profileSection.className += ` ${element}--active`;
-        authorDiv.className += ` ${element}__author--hidden`;
-        socialDiv.className += ` ${element}__social--active`;
+        
     }
 
 };
