@@ -121,8 +121,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .card {
-    width: 60%;
-    max-width: 735px;
+    width: 735px;
     height: 285px;
     display: flex; }
     .card__banner {
