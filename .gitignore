@@ -17,5 +17,5 @@
 # Avoid sass cache
 .sass-cache
 
-# Avoid md files
-*.md
+# Avoid md file
+style-guide.md
