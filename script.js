@@ -24,3 +24,20 @@ const buttonImg = document.getElementsByClassName('btn__img')[0];
 const button = document.getElementsByTagName('button')[0];
 
 button.addEventListener('click', toggleClass);    
+// Clean up styles according to screen size
+const cleanStyles = () => {
+    const parentElement = 'profile';
+    const width = document.documentElement.clientWidth;
+
+    if (width >= 1024 && button.className.includes('btn--active')) {
+        profileSection.className = `${parentElement}`;
+        profileContainer.className = `${parentElement}__container`;
+        authorDiv.className = `${parentElement}__author`;
+    } else if (button.className.includes('btn--active')) {
+        profileSection.className = `${parentElement} ${parentElement}--active`;
+        profileContainer.className = `${parentElement}__container ${parentElement}__container--active`;
+        authorDiv.className = `${parentElement}__author ${parentElement}__author--hidden`;
+    }
+}
+
+window.addEventListener('resize', cleanStyles);
