@@ -52,9 +52,15 @@ body {
   transition: background-color 0.2s ease-in-out; }
   .profile--active {
     background-color: #48556a; }
-  .profile__author {
+  .profile__container {
     width: 80%;
     margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .profile__container--active {
+      margin-bottom: 0; }
+  .profile__author {
     display: flex;
     align-items: center; }
     .profile__author--hidden {
@@ -74,10 +80,7 @@ body {
     color: #9eafc2;
     font-size: 1rem; }
   .profile__social {
-    display: none;
-    width: 80%;
-    margin: 0 auto;
-    align-items: center; }
+    display: none; }
     .profile__social--active {
       display: flex; }
   .profile__share {
@@ -103,6 +106,10 @@ body {
   cursor: pointer; }
   .btn--active {
     background-color: #6d7f97; }
+  .btn__img--hidden {
+    display: none; }
+  .btn__img--active {
+    display: block; }
 
 .attribution {
   font-size: 11px;
@@ -140,19 +147,20 @@ body {
 
   .profile {
     padding: 0; }
-    .profile__author {
-      margin: auto; }
     .profile__social {
-      width: 60%;
-      padding: 5px;
+      width: 50%;
+      padding: 5px 15px;
       background-color: #48556a;
       border-radius: 10px;
       position: absolute;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      bottom: 110px;
-      left: 170px; }
+      bottom: 90px;
+      left: 255px;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0.2s, opacity 0.5s linear; }
       .profile__social::after {
         content: '';
         display: block;
@@ -162,9 +170,16 @@ body {
         border-right: 13px solid transparent;
         border-left: 13px solid transparent;
         border-bottom: 13px solid transparent; }
+      .profile__social--active {
+        visibility: visible;
+        opacity: 1; }
+    .profile__icons {
+      margin-left: 0; }
 
-  .btn:hover {
-    background-color: #9eafc2; }
+  .btn {
+    transition: background-color 0.3s ease-out; }
+    .btn:hover {
+      background-color: #9eafc2; }
 
   .attribution {
     margin-top: 12rem; } }
